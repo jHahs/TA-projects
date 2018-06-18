@@ -1,0 +1,7 @@
+C:\Users\snosh\source\repos\IOpractice\IOpractice\bin\Debug\IOpractice.exe.config
+C:\Users\snosh\source\repos\IOpractice\IOpractice\bin\Debug\IOpractice.exe
+C:\Users\snosh\source\repos\IOpractice\IOpractice\bin\Debug\IOpractice.pdb
+C:\Users\snosh\source\repos\IOpractice\IOpractice\obj\Debug\IOpractice.csprojAssemblyReference.cache
+C:\Users\snosh\source\repos\IOpractice\IOpractice\obj\Debug\IOpractice.csproj.CoreCompileInputs.cache
+C:\Users\snosh\source\repos\IOpractice\IOpractice\obj\Debug\IOpractice.exe
+C:\Users\snosh\source\repos\IOpractice\IOpractice\obj\Debug\IOpractice.pdb
