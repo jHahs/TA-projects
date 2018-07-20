@@ -35,13 +35,13 @@ else
             if (!item.Campaign.IsExpired)
             {
                  <tr>
-            @if (item.Campaign.RemainingTime < new TimeSpan(5, 0, 0, 0))
+            @if (item.Campaign.RemainingTime < new TimeSpan(6, 0, 0, 0))
             {
             <td class="td-valign">
                 <div class="image-container">
                     <img src="@item.Campaign.ImageUrL" class="imgThumb image" />
                     <div class="middle">
-                        <div class="text">Expiring in 5 days</div>
+                        <div class="text">Expiring within 5 days</div>
                     </div>
                 </div>
             </td>
