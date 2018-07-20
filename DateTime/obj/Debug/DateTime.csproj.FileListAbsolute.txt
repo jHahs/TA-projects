@@ -1,7 +1,0 @@
-c:\users\snosh\source\repos\DateTime\DateTime\bin\Debug\DateTime.exe.config
-c:\users\snosh\source\repos\DateTime\DateTime\bin\Debug\DateTime.exe
-c:\users\snosh\source\repos\DateTime\DateTime\bin\Debug\DateTime.pdb
-c:\users\snosh\source\repos\DateTime\DateTime\obj\Debug\DateTime.csprojAssemblyReference.cache
-c:\users\snosh\source\repos\DateTime\DateTime\obj\Debug\DateTime.csproj.CoreCompileInputs.cache
-c:\users\snosh\source\repos\DateTime\DateTime\obj\Debug\DateTime.exe
-c:\users\snosh\source\repos\DateTime\DateTime\obj\Debug\DateTime.pdb

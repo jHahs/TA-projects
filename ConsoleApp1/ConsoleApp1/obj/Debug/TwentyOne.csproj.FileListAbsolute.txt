@@ -1,7 +1,0 @@
-c:\users\snosh\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\TwentyOne.csprojAssemblyReference.cache
-c:\users\snosh\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\TwentyOne.csproj.CoreCompileInputs.cache
-c:\users\snosh\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
-c:\users\snosh\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
-c:\users\snosh\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
-c:\users\snosh\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
-c:\users\snosh\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

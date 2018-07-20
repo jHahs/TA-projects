@@ -1,7 +1,0 @@
-C:\Users\snosh\source\repos\Excercise\Excercise\bin\Debug\Excercise.exe.config
-C:\Users\snosh\source\repos\Excercise\Excercise\bin\Debug\Excercise.exe
-C:\Users\snosh\source\repos\Excercise\Excercise\bin\Debug\Excercise.pdb
-C:\Users\snosh\source\repos\Excercise\Excercise\obj\Debug\Excercise.csprojAssemblyReference.cache
-C:\Users\snosh\source\repos\Excercise\Excercise\obj\Debug\Excercise.csproj.CoreCompileInputs.cache
-C:\Users\snosh\source\repos\Excercise\Excercise\obj\Debug\Excercise.exe
-C:\Users\snosh\source\repos\Excercise\Excercise\obj\Debug\Excercise.pdb
