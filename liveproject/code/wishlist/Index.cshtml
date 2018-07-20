@@ -1,0 +1,87 @@
+﻿@model BlueRibbonsReview.ViewModels.WishlistsViewModel
+
+@{
+    ViewBag.Title = Model.ApplicationUser.FirstName + "'s Wishlist";
+}
+
+@if (Model.Wishlists.Count() == 0)
+{
+    <div class="container">
+        <div class="row">
+            <h4>You currently have no items in your Wishlist. Check out our products @Html.ActionLink("here!", "Index", "Campaigns")</h4>
+        </div>
+    </div>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Default.Campaign.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Default.Campaign.SalePrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Default.Campaign.CloseDate)
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Wishlists)
+        {
+            if (!item.Campaign.IsExpired)
+            {
+                 <tr>
+            @if (item.Campaign.RemainingTime < new TimeSpan(5, 0, 0, 0))
+            {
+            <td class="td-valign">
+                <div class="image-container">
+                    <img src="@item.Campaign.ImageUrL" class="imgThumb image" />
+                    <div class="middle">
+                        <div class="text">Expiring in 5 days</div>
+                    </div>
+                </div>
+            </td>
+            }
+            else{
+            <td class="td-valign">
+                <img src="@item.Campaign.ImageUrL" class="imgThumb" />
+            </td>
+             }
+            <td class="td-valign">
+                @Html.DisplayFor(modelItem => item.Campaign.Name)
+            </td>
+            <td class="td-valign">
+                @Html.DisplayFor(modelItem => item.Campaign.SalePrice)
+            </td>
+            <td class="td-valign">
+                @Html.DisplayFor(modelItem => item.Campaign.CloseDate)
+            </td>
+            <td class="td-valign">
+                <a href="@item.Campaign.VendorsPurchaseURL" target="_blank">See on Amazon</a>
+            </td>
+            <td class="td-valign">
+                    @Html.ActionLink("Remove from Wishlist ", "Delete", new { id = item.WishlistId })
+            </td>
+        </tr>
+            }
+            
+        }
+
+
+        
+
+
+
+
+    </table>
+}
+
+<script>
+    var para = document.createElement("h3");
+    var element = document.getElementsByTagName("H3")[0];
+    element.appendChild(para).className = "fa fa-shopping-cart shopping-cart-margin";
+</script>

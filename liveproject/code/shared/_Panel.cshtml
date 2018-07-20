@@ -1,0 +1,69 @@
+﻿@model BlueRibbonsReview.Models.Campaign
+
+@{
+    ViewBag.Title = "Panel";
+}
+
+
+
+<div class="hover-expiration campaign-panel-@Model.CampaignID col-lg-2 col-md-3 col-sm-4 col-xs-6" id="bootstrap-override">
+    @if (Model.RemainingTime != null && Model.RemainingTime < new TimeSpan(10,0,0,0))
+    {
+            <div class="hover-expiration-content">
+                @{TimeSpan remainingTime = (TimeSpan)Model.RemainingTime;}
+                @(remainingTime.Days >= 1 ? String.Format("Expires in {0:%d} days.", remainingTime) :
+                              remainingTime.Hours >= 1 ? String.Format("Expires in {0:%h} hours.", remainingTime) :
+                                                                                        "Expires in less than an hour.")
+            </div>
+    }
+    <div class="panel-body panel-body-@Model.CampaignID">
+        <tr>
+            <div class="productimagebox productimagebox-@Model.CampaignID" style="height:150px; overflow:hidden; padding:5%;">
+                <td>
+                    <a href="@Url.Action("BuyerDetails", "Campaigns", new { id = Model.CampaignID, name = Model.Name })"><img src="@Html.DisplayFor(modelItem => Model.ImageUrL)" style="max-height:98%; max-width:97%; cursor: pointer;" /></a>
+                </td>
+            </div>
+            <div class="productnamebox productnamebox-@Model.CampaignID" style="line-height:1.15em; height:3.5em; overflow:hidden;">
+                <td>
+                    @Html.DisplayFor(modelItem => Model.Name)
+                </td>
+            </div>
+            <div class="specialprice specialprice-@Model.CampaignID">
+                <td>
+                    $@Html.DisplayFor(modelItem => Model.SalePrice)
+                </td>
+            </div>
+
+
+
+            <td>
+                <div class="modal fade" id="modal-@Model.CampaignID" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+                    <div class="details-border modal-dialog modal-dialog-@Model.CampaignID modal-lg" role="document">
+                        <div class="modal-content modal-content-@Model.CampaignID">
+                            <div class="modal-header modal-header-@Model.CampaignID">
+                                <h3 class="details-color" style="font-weight:700"id="modal-title-@Model.CampaignID">
+                                    @Html.DisplayFor(modelItem => Model.Name)
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </h3>
+
+                            </div>
+                            <div class="modal-body">
+                                @{
+                                    Html.RenderPartial("_Details", Model);
+                                }
+                            </div>
+                            <div class="modal-footer" style="border:none;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-@Html.DisplayFor(modelItem => Model.CampaignID)">
+                    Quick Look
+                </button>
+
+            </td>
+        </tr>
+    </div>
+</div>

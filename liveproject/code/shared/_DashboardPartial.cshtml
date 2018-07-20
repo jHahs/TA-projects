@@ -1,0 +1,43 @@
+﻿@model BlueRibbonsReview.ViewModels.DashboardViewModel
+
+@if (User.IsInRole("Seller"))
+{
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seller Dashboard <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li class="dropdown-submenu">
+                <a id="campains-submenu" class="test dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Campaigns<span class="caret caret-right"></span></a>
+                <ul class="dropdown-menu">
+                    <li id="sub-item1">@Html.ActionLink("Create", "Create", "Campaigns")</li>
+                    <li id="sub-item2">@Html.ActionLink("My Campaigns", "SellerIndex", "Campaigns")</li>
+                </ul>
+            </li>
+            <li>@Html.ActionLink("Reviews", "SellerReviewIndex", "Reviews")</li>
+            <li>@Html.ActionLink("Refer a Friend", "Create", "Referrals")</li>
+        </ul>
+    </li>
+}
+@if (User.IsInRole("Buyer") || User.IsInRole("Seller"))
+{
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Buyer Dashboard <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Campaigns", "Index", "Campaigns")</li>
+            <li>@Html.ActionLink("Reviews", "ReviewIndex", "Reviews")</li>
+            <li>
+                <a href="@Url.Action("Index", "Wishlist")">Wishlist <i class="fas fa-shopping-cart">(@Model.WishlistLength)</i></a>
+            </li>
+        </ul>
+    </li>
+}
+@if (User.IsInRole("Admin"))
+{
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Dashboard <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Users", "SortIndex", "Admin/Index")</li>
+            <li>@Html.ActionLink("Campaigns", "Index", "Campaigns/AdminView")</li>
+            <li>@Html.ActionLink("Referrals", "Index", "Referrals/Index")</li>
+        </ul>
+    </li>
+}
