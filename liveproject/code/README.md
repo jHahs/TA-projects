@@ -88,7 +88,7 @@ next I added some logic to the index page for determining whether or not to appl
                 <div class="image-container">
                     <img src="@item.Campaign.ImageUrL" class="imgThumb image" />
                     <div class="middle">
-                        <div class="text">Expiring in 5 days</div>
+                        <div class="text">Expiring in within 5 days</div>
                     </div>
                 </div>
             </td>
@@ -118,11 +118,14 @@ next I added some logic to the index page for determining whether or not to appl
   ```
   
   I used the Remainingtime method which calculates how many days are left in a campaigns promotion discount period, along with Timespan, to only execute when its expiring within 5 days.  
+  
+  ![screenshot 42 _li](https://user-images.githubusercontent.com/38439646/43030227-936aac24-8c42-11e8-900d-371115347869.jpg)
+
  
 
 ## Review stars fill in
 
-So this one was interesting. My job was to have the stars exactly match the average score of the product, so essentially the star was going to portray the score accurately. Before I changed the code, the star would only fill 1/5 , 2/5 etc. 
+So this one was interesting. My job was to have the stars exactly match the average score of the product, so essentially the star was going to portray the score accurately on the review index page. Before I changed the code, the star would only fill 1/5 , 2/5 etc. 
 
 ```
 \\before 
@@ -200,7 +203,39 @@ as well as to remove the AdminViewModel h4 tag
         <div class="form-group">
 
 ```
-##
+## Change Buyer dashboard link
+
+The problem on this story, was that for a buyer on the site, when they would click "campaigns" it would take them to the sellerindex page instead of the campaign index page. So to remedy that, I just changed the hmtl actionlink to index instead of seller index
+
+```
+\\before
+
+ <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Buyer                Dashboard <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Campaigns", "SellerIndex", "Campaigns")</li>
+            <li>@Html.ActionLink("Reviews", "ReviewIndex", "Reviews")</li>
+            <li>
+                <a href="@Url.Action("Index", "Wishlist")">Wishlist <i class="fas fa-shopping-cart">(@Model.WishlistLength)</i></a>
+
+
+
+```
+
+```
+\\after 
+
+<li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Buyer                Dashboard <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Campaigns", "Index", "Campaigns")</li>
+            <li>@Html.ActionLink("Reviews", "ReviewIndex", "Reviews")</li>
+            <li>
+                <a href="@Url.Action("Index", "Wishlist")">Wishlist <i class="fas fa-shopping-cart">(@Model.WishlistLength)</i></a>
+
+
+```
+
 
 
 
