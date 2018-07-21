@@ -167,6 +167,10 @@ So this one was interesting. My job was to have the stars exactly match the aver
                     
 
 ```
+
+![screenshot 48](https://user-images.githubusercontent.com/38439646/43031010-f957f996-8c4d-11e8-987a-798acb7b84a1.png)
+
+
 ## ViewBag Title change 
 
 this one was pretty straight forward, the objective was to switch the Viewbag Title to the first name of the user instead of edit, on the edit page for the admin controller,
@@ -203,6 +207,11 @@ as well as to remove the AdminViewModel h4 tag
         <div class="form-group">
 
 ```
+
+![screenshot 49 _li](https://user-images.githubusercontent.com/38439646/43031060-f4564ed8-8c4e-11e8-902b-d85d1a714542.jpg)
+
+
+
 ## Change Buyer dashboard link
 
 The problem on this story, was that for a buyer on the site, when they would click "campaigns" it would take them to the sellerindex page instead of the campaign index page. So to remedy that, I just changed the hmtl actionlink to index instead of seller index
@@ -235,7 +244,66 @@ The problem on this story, was that for a buyer on the site, when they would cli
 
 
 ```
+### Before click
+
+![screenshot 52](https://user-images.githubusercontent.com/38439646/43031096-d053c140-8c4f-11e8-83fa-2af293d49754.png)
 
 
+### After click 
+
+![screenshot 53](https://user-images.githubusercontent.com/38439646/43031109-ef2192d2-8c4f-11e8-85e1-c176ec81f74d.png)
+
+## Remove excess width from sidebar 
+
+For this it was all CSS changes to be made, the problem was is the the padding was too much so I shortened it, as well adjusted the height pixel count to 100px , and width to 125px. 
+
+```
+\\before
+
+#wrapper.toggled #sidebar-wrapper {
+        width: 220px;
+    }
+ .sidebar-nav .my-navbar {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 200px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px 10px 30px;
+
+        }
+
+```
+
+```
+
+\\after
+ #wrapper.toggled #sidebar-wrapper {
+        width: 125px;
+    }
+    
+    .sidebar-nav .my-navbar {
+        position: absolute;
+        top: 0;
+        width: 200px;
+        height:100px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px  ;
+        }
 
 
+```
+
+![screenshot 54](https://user-images.githubusercontent.com/38439646/43031199-a5d45aea-8c51-11e8-9bdc-0b635f25a59b.png)
+
+So thats a wrap so far for my user stories completed. This project has taught me what its like to work with a team. We used visual studio and TFS to do this project, and I work with 2 other awesome developers doing this project. Thanks for having a look.
