@@ -12,7 +12,7 @@ I'm happy to show what I've done so far, and you may see this expand in the futu
 
 ## Wishlist Hover
 
-For this story, I had to add a hover overlay to the thumbnail on the wishlist index page, if the campaign was going to expire in 5 days. So I used css and designed a hover effect for it to display meeting that logic. I created an image container to nest the thumbnail image in to execute on hover, which also displays the middle text.
+For this story, I had to add a hover overlay to the thumbnail on the wishlist index page, if the campaign was going to expire within 5 days. So I used css and designed a hover effect for it to display meeting that logic. I created an image container to nest the thumbnail image in to execute on hover, which also displays the middle text.
 
 ```
 //css additions
@@ -173,7 +173,7 @@ So this one was interesting. My job was to have the stars exactly match the aver
 
 ## ViewBag Title change 
 
-this one was pretty straight forward, the objective was to switch the Viewbag Title to the first name of the user instead of edit, on the edit page for the admin controller,
+This one was pretty straight forward, the objective was to switch the Viewbag Title to the first name of the user instead of edit, on the edit page for the admin controller,
 as well as to remove the AdminViewModel h4 tag
 
 ```
