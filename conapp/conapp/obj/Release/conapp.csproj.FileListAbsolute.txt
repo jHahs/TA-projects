@@ -1,7 +1,0 @@
-C:\Users\snosh\OneDrive\Documents\GitHub\TA-projects\conapp\conapp\bin\Release\conapp.exe.config
-C:\Users\snosh\OneDrive\Documents\GitHub\TA-projects\conapp\conapp\bin\Release\conapp.exe
-C:\Users\snosh\OneDrive\Documents\GitHub\TA-projects\conapp\conapp\bin\Release\conapp.pdb
-C:\Users\snosh\OneDrive\Documents\GitHub\TA-projects\conapp\conapp\obj\Release\conapp.csprojAssemblyReference.cache
-C:\Users\snosh\OneDrive\Documents\GitHub\TA-projects\conapp\conapp\obj\Release\conapp.csproj.CoreCompileInputs.cache
-C:\Users\snosh\OneDrive\Documents\GitHub\TA-projects\conapp\conapp\obj\Release\conapp.exe
-C:\Users\snosh\OneDrive\Documents\GitHub\TA-projects\conapp\conapp\obj\Release\conapp.pdb
